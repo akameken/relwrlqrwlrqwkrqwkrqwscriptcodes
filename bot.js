@@ -80,7 +80,7 @@ client.guilds.get(server).channels.get(channel).send("**Welcome to Script Codes*
 
 client.on ("guildMemberAdd", member => {
 
-   var role = member.guild.roles.find ("name", "Online member");
+   var role = member.guild.roles.find ("name", "Online members");
    member.addRole (role);
 
 })
@@ -126,16 +126,5 @@ client.on('message' , message => {
  })
   }  
  });
-
-client.on ("guildMemberAdd", member => {
-
-   var role = member.guild.roles.find ("name", "Online member");
-   member.addRole (role);
-
-})
-
-client.on ("guildMemberRemove", member => {
-
-})
 
 client.login(process.env.BOT_TOKEN);
