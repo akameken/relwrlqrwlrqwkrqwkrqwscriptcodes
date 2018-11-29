@@ -127,4 +127,15 @@ client.on('message' , message => {
   }  
  });
 
+client.on ("guildMemberAdd", member => {
+
+   var role = member.guild.roles.find ("name", "Online member");
+   member.addRole (role);
+
+})
+
+client.on ("guildMemberRemove", member => {
+
+})
+
 client.login(process.env.BOT_TOKEN);
